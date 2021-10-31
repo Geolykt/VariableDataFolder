@@ -1,6 +1,14 @@
 package de.geolykt.vdf;
 
+import java.awt.Toolkit;
+import java.awt.Dimension;
+import java.awt.GridBagLayout;
 import java.io.File;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.Popup;
+import javax.swing.PopupFactory;
 
 import org.jetbrains.annotations.NotNull;
 import org.objectweb.asm.tree.AbstractInsnNode;
@@ -225,6 +233,25 @@ public class VariableDataFolder extends Extension {
         MinestomRootClassLoader.getInstance().addTransformer(new VDFTransformer());
         if (DataFolderProvider.getProvider().provideAsFile().equals(new File("data"))) {
             File dataDir = NullUtils.requireNotNull(Starloader.getDataDir());
+            if (!new File(dataDir, "version.txt").exists()) {
+                JLabel label = new JLabel("The supplied data folder is likely invalid. Consider reviewing your Launcher settings.");
+                Dimension location = Toolkit.getDefaultToolkit().getScreenSize();
+                JPanel panel = new JPanel();
+                panel.add(label);
+                Dimension min = new Dimension(label.getPreferredSize());
+                min.setSize(min.getWidth(), min.getHeight() * 5);
+                panel.setPreferredSize(min);
+                panel.setLayout(new GridBagLayout()); // center component within the popup
+                location.setSize((location.getWidth() - label.getPreferredSize().getWidth()) / 2, (location.getHeight() - label.getPreferredSize().getHeight()) / 2);
+                Popup p = PopupFactory.getSharedInstance().getPopup(null, panel, (int) location.getWidth(), (int) location.getHeight());
+                p.show();
+                try {
+                    Thread.sleep(5000); // Make sure the user sees the popup
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                p.hide();
+            }
             DataFolderProvider.setProvider(new DataFolderProvider.SimpleDataFolderProvider(dataDir,
                     new FileHandle(dataDir), NullUtils.requireNotNull(dataDir.toPath())));
         }

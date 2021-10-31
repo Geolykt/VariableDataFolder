@@ -8,6 +8,10 @@
     <name>Variable Data Folder</name>
     <description>A galimulator mod that allows to run SLL anywhere by making use of the data folder property provided by SLL.</description>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <repositories>
         <repository>
             <id>geolykt-maven</id>
@@ -25,6 +29,14 @@
             <groupId>de.geolykt</groupId>
             <artifactId>starloader-api</artifactId>
             <version>1.5.0</version>
+            <exclusions>
+                <exclusion>
+                    <!-- SLL 3.+ uses a custom fork of Mixin which is not hosted at a third party repository like
+                        the original mixin that was used in SLL 1, which is the SLL used by SLAPI -->
+                    <groupId>org.spongepowered</groupId>
+                    <artifactId>mixin</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
