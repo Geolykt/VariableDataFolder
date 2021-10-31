@@ -1,0 +1,8 @@
+{
+  "entrypoint": "de.geolykt.vdf.VariableDataFolder",
+  "name": "VariableDataFolder",
+  "version": "4.9-stable.0",
+  "dependencies": [
+    "StarloaderAPI"
+  ]
+}
