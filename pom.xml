@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.geolykt</groupId>
     <artifactId>variable-data-folder</artifactId>
-    <version>4.9-stable.0</version>
+    <version>4.10-alpha.0</version>
     <name>Variable Data Folder</name>
     <description>A galimulator mod that allows to run SLL anywhere by making use of the data folder property provided by SLL.</description>
 

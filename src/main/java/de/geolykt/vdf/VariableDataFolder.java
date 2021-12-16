@@ -40,20 +40,25 @@ public class VariableDataFolder extends Extension {
             case "snoddasmannen/galimulator/GalFX":
             case "snoddasmannen/galimulator/Space":
             case "snoddasmannen/galimulator/MapData":
-            case "snoddasmannen/galimulator/bh": // obfuscated - high churn expected
-            case "snoddasmannen/galimulator/cy": // obfuscated - high churn expected
-            case "snoddasmannen/galimulator/gf": // obfuscated - high churn expected
+            case "snoddasmannen/galimulator/bj": // obfuscated - high churn expected. Valid for 4.10
+            case "snoddasmannen/galimulator/de": // obfuscated - high churn expected. Valid for 4.10
+            case "snoddasmannen/galimulator/fe": // obfuscated - high churn expected. Valid for 4.10
+            case "snoddasmannen/galimulator/gp": // obfuscated - high churn expected. Valid for 4.10
+            case "snoddasmannen/galimulator/ii": // obfuscated - high churn expected. Valid for 4.10
             case "snoddasmannen/galimulator/AudioManager":
             case "snoddasmannen/galimulator/AudioManager$AudioSample":
-            case "snoddasmannen/galimulator/planetview/d": // obfuscated - high churn expected
-            case "snoddasmannen/galimulator/cd": // obfuscated - high churn expected
+            case "snoddasmannen/galimulator/planetview/d": // obfuscated - high churn expected. Valid for 4.10
+            case "snoddasmannen/galimulator/cf": // obfuscated - high churn expected. Valid for 4.10
+            case "snoddasmannen/galimulator/ch": // obfuscated - high churn expected. Valid for 4.10
+            case "snoddasmannen/galimulator/cj": // obfuscated - high churn expected. Valid for 4.10
             case "snoddasmannen/galimulator/actors/EaterOfStars":
-            case "snoddasmannen/galimulator/ui/ms": // obfuscated - high churn expected
+            case "snoddasmannen/galimulator/actors/JsonActorFactory":
+            case "snoddasmannen/galimulator/ui/ng": // obfuscated - high churn expected. Valid for 4.10
             case "snoddasmannen/galimulator/Empire":
-            case "snoddasmannen/galimulator/ProceduralScenarioSource$3": // anonymous class - high churn expected
+            case "snoddasmannen/galimulator/ProceduralScenarioSource$4": // anonymous class - high churn expected. Valid for 4.10
             case "snoddasmannen/galimulator/SpeciesDescription":
-            case "snoddasmannen/galimulator/ct": // obfuscated - high churn expected
-            case "snoddasmannen/galimulator/eu": // obfuscated - high churn expected
+            case "snoddasmannen/galimulator/cz": // obfuscated - high churn expected. Valid for 4.10
+            case "snoddasmannen/galimulator/Native":
                 remapClass(node);
                 return true;
             }
@@ -73,20 +78,25 @@ public class VariableDataFolder extends Extension {
             case "snoddasmannen/galimulator/GalFX":
             case "snoddasmannen/galimulator/Space":
             case "snoddasmannen/galimulator/MapData":
-            case "snoddasmannen/galimulator/bh": // obfuscated - high churn expected
-            case "snoddasmannen/galimulator/cy": // obfuscated - high churn expected
-            case "snoddasmannen/galimulator/gf": // obfuscated - high churn expected
+            case "snoddasmannen/galimulator/bj": // obfuscated - high churn expected
+            case "snoddasmannen/galimulator/de": // obfuscated - high churn expected
+            case "snoddasmannen/galimulator/fe": // obfuscated - high churn expected
+            case "snoddasmannen/galimulator/gp": // obfuscated - high churn expected
+            case "snoddasmannen/galimulator/ii": // obfuscated - high churn expected
             case "snoddasmannen/galimulator/AudioManager":
             case "snoddasmannen/galimulator/AudioManager$AudioSample":
             case "snoddasmannen/galimulator/planetview/d": // obfuscated - high churn expected
-            case "snoddasmannen/galimulator/cd": // obfuscated - high churn expected
+            case "snoddasmannen/galimulator/cf": // obfuscated - high churn expected
+            case "snoddasmannen/galimulator/ch": // obfuscated - high churn expected
+            case "snoddasmannen/galimulator/cj": // obfuscated - high churn expected
             case "snoddasmannen/galimulator/actors/EaterOfStars":
-            case "snoddasmannen/galimulator/ui/ms": // obfuscated - high churn expected
+            case "snoddasmannen/galimulator/actors/JsonActorFactory":
+            case "snoddasmannen/galimulator/ui/ng": // obfuscated - high churn expected
             case "snoddasmannen/galimulator/Empire":
-            case "snoddasmannen/galimulator/ProceduralScenarioSource$3": // anonymous class - high churn expected
+            case "snoddasmannen/galimulator/ProceduralScenarioSource$4": // anonymous class - high churn expected
             case "snoddasmannen/galimulator/SpeciesDescription":
-            case "snoddasmannen/galimulator/ct": // obfuscated - high churn expected
-            case "snoddasmannen/galimulator/eu": // obfuscated - high churn expected
+            case "snoddasmannen/galimulator/cz": // obfuscated - high churn expected
+            case "snoddasmannen/galimulator/Native":
                 return true;
             default:
                 return false;
@@ -182,12 +192,12 @@ public class VariableDataFolder extends Extension {
             /* ==== MapData ==== */
             case "data/governments.json":
                 return generateSimpleString("governments.json");
-            /* ==== cy (OBFUSCATED) ==== */
+            /* ==== de (OBFUSCATED) ==== */
             case "data/mottopreps.txt":
                 return generateSimpleString("mottopreps.txt");
             case "data/mottonouns.txt":
                 return generateSimpleString("mottonouns.txt");
-            /* ==== gf (OBFUSCATED) ==== */
+            /* ==== gp (OBFUSCATED) ==== */
             case "data/i18n/Galimulator-strings":
                 return generateSimpleString("i18n/Galimulator-strings");
             /* ==== AudioManager ==== */
@@ -201,13 +211,13 @@ public class VariableDataFolder extends Extension {
                 return generateSimpleString("planetarynouns.txt");
             case "data/emotions.txt":
                 return generateSimpleString("emotions.txt");
-            /* ==== cd (OBFUSCATED) ==== */
+            /* ==== cf (OBFUSCATED) ==== */
             case "data/version.txt":
                 return generateSimpleString("version.txt");
             /* ==== EaterOfStars ==== */
             case "data/eaterblurbs.txt":
                 return generateSimpleString("eaterblurbs.txt");
-            /* ==== ui.ms (OBFUSCATED) ==== */
+            /* ==== ui.ng (OBFUSCATED) ==== */
             case "data/maps/":
                 return generateSimpleString("maps/");
             /* ==== Empire ==== */
@@ -216,12 +226,34 @@ public class VariableDataFolder extends Extension {
             /* ==== SpeciesDescription ==== */
             case "data/textfiles/appendages-endings.txt":
                 return generateSimpleString("textfiles/appendages-endings.txt");
-            /* ==== bh (OBFUSCATED) ==== */
+            /* ==== bj (OBFUSCATED) ==== */
             case "data/log.txt":
                 return generateSimpleString("log.txt");
-            /* ==== ct (OBFUSCATED) ==== */
+            /* ==== cz (OBFUSCATED) ==== */
             case "data/scenariolicense.txt":
                 return generateSimpleString("scenariolicense.txt");
+            /* ==== actors.JsonActorFactory ==== */
+            case "data/ships/natives/":
+                return generateSimpleString("ships/natives/");
+            /* ==== Native ==== */
+            case "data/natives.json":
+                return generateSimpleString("natives.json");
+            /* ==== ProceduralScenarioSource$4 ==== */
+            case "data/scenarios/deathmatch.txt":
+                return generateSimpleString("scenarios/deathmatch.txt");
+            /* ==== ch (OBFUSCATED) ==== */
+            case "data/mods/ships/steamworkshop":
+                return generateSimpleString("mods/ships/steamworkshop");
+            case "data/maps/quickmaps":
+                return generateSimpleString("maps/quickmaps");
+            case "data/maps":
+                return generateSimpleString("maps");
+            /* ==== cj (OBFUSCATED) ==== */
+            case "data/mods/tempupload":
+                return generateSimpleString("mods/tempupload");
+            /* ==== ii (OBFUSCATED) ==== */
+            case "data/builtins.txt":
+                return generateSimpleString("builtins.txt");
             default:
                 return original;
             }
